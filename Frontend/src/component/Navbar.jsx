@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { CiSearch } from "react-icons/ci";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../context/authcontext";
+import { AuthContext } from "../context/AuthContext";
 import { PostContext } from "../context/PostContext";
 
 const Navbar = () => {
