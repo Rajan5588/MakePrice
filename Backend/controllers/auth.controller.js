@@ -29,12 +29,12 @@ if (!name || !email || !number || !password) {
       const token = jwt.sign({ userId: newUser._id }, process.env.JWT_SECRET, {
       expiresIn: "2h",
     });
-   res.cookie("token", token, {
-     httpOnly: true,     // Prevent JS access
-        secure: false,      // true in production (HTTPS)
-        sameSite: "strict",
-        maxAge: 7 * 24 * 60 * 60 * 1000
-   });
+ res.cookie("token", token, {
+  httpOnly: true,
+  secure: true,        // production me true hona hi chahiye
+  sameSite: "none",    // cross origin ke liye mandatory
+  maxAge: 7 * 24 * 60 * 60 * 1000
+});
     
   return  res
       .status(201)
@@ -69,12 +69,12 @@ const loginUser=async(req,res)=>{
       expiresIn: "2h",
     });
     console.log(token)
-   res.cookie("token", token, {
-     httpOnly: true,     // Prevent JS access
-        secure: false,      // true in production (HTTPS)
-        sameSite: "strict",
-        maxAge: 7 * 24 * 60 * 60 * 1000
-   });
+  res.cookie("token", token, {
+  httpOnly: true,
+  secure: true,        // production me true hona hi chahiye
+  sameSite: "none",    // cross origin ke liye mandatory
+  maxAge: 7 * 24 * 60 * 60 * 1000
+});
   return  res.json({ message: "login successful", user, token });
   } catch (error) {
   return  res.status(500).json({ message: "error logging in", error: error.message })
