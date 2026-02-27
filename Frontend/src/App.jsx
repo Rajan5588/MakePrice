@@ -1,7 +1,7 @@
 import React from 'react'
 import UserLayout from './layout/UserLayout'
 import { Login } from './component/Login'
-import { AuthContext } from './context/authcontext'
+import { AuthContext } from './context/AuthContext'
 import { useContext } from 'react'
 import{Routes , Route} from "react-router-dom"
 import Home from './component/Home'

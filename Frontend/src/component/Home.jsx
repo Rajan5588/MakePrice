@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react'
-import { AuthContext } from '../context/authcontext';
+import { AuthContext } from '../context/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
 import { PostContext } from '../context/PostContext';
 const Home = () => {
