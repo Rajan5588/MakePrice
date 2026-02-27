@@ -22,7 +22,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.use(
   cors({
-    origin: "http://localhost:5173", // frontend URL
+    origin:  process.env.FRONTEND_URL, // frontend URL
     credentials: true,
   })
 );
@@ -30,10 +30,10 @@ app.use(cookieParser());
 app.use("/api",authRoutes);
 app.use("/user",postRoutes);
 
-   
+   const port=process.env.PORT || 3000;
 
-app.listen(3000,()=>{
-     console.log("Server is running on port 3000");
+app.listen(port,()=>{
+     console.log("Server is running on port 3000",port);
 })
 
 
