@@ -61,7 +61,9 @@ const checkAuth = async () => {
       });
       setUserData(request.data);
     } catch (error) {
-        throw error;
+         if(error.response && error.response.status === 401){
+        setUserData(null);
+      } 
     }
 }
 checkAuth();
@@ -74,9 +76,9 @@ checkAuth();
       await client.post("/logout",{},{
         withCredentials: true
       });
-
+      setUserData(null);
     } catch (error) {
-      throw error;
+     throw error  ;
     }
   };
 

@@ -24,11 +24,11 @@ const navigate=useNavigate()
 
   return (
     <nav  className="w-full  h-[3.1rem] bg-zinc-500 color-black flex items-center justify-between">
-      <div className="w-[20%] p-[1.2rem] h-full flex items-center justify-center placeholder-muted ">
-        <h1 className="text-2xl font-bold whitespace-nowrap ... md:leading-2  "><Link to="/home">Make Price</Link></h1>
+      <div className="w-[30%] p-[1.2rem] h-full flex items-center justify-center placeholder-muted ">
+        <h1 className="text-2xl font-bold whitespace-nowrap ... md:leading-0  "><Link to="/home">Make Price</Link></h1>
 
       </div>
-      <div className="w-[60%]  ">
+      <div className="w-[50%]  ">
        
        
           <div  className="w-full invisible lg:visible  flex bg-white rounded-md   gap-2 px-2  items-center justify-center">
@@ -45,7 +45,7 @@ const navigate=useNavigate()
        
       </div>
        <div className="w-[20%] flex items-center justify-center gap-4">
-      <Link to="/login" className="bg-yellow-700 text-white w-[5.1rem] h-[2.1rem] rounded-md shadow-2xl shadow-yellow-900 hover:scale-105 flex items-center justify-center">{token?<p onClick={handleLogout}>"Logout"</p>:"Login"}</Link>
+      <div className="bg-yellow-700 text-white w-[5.1rem] h-[2.1rem] rounded-md shadow-2xl shadow-yellow-900 hover:scale-105 flex items-center justify-center">{token?<p onClick={handleLogout}>"Logout"</p>:"Login"}</div>
         </div>
     </nav>
   );

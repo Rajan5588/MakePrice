@@ -67,13 +67,13 @@ const handleDelete = async (postId) => {
               />
             )}
            <div className="w-full flex items-center justify-around">
-               <motion.button style={{padding:"0.4rem"}} onClick={() => navigate(`/edit/${postId}`)} className="mt-4 px-[1.2rem] py-3 rounded-xl  font-bold flex items-center gap-3 bg-gradient-to-br from-black/80 to-black/90 border border-white/10 text-white text-sm shadow-[0_25px_60px_rgba(0,0,0,0.7)] ">
+               <motion.button style={{padding:"0.4rem"}} onClick={() => navigate(`/edit/${postId}`)} className="mt-4 cursor-pointer px-[1.2rem] py-3 rounded-xl  font-bold flex items-center gap-3 bg-gradient-to-br from-green/80 to-green-900 border border-white/10 text-white text-sm shadow-[0_25px_60px_rgba(0,0,0,0.7)] ">
               Edit Post
             </motion.button>
-            <motion.button style={{padding:"0.4rem"}} onClick={() => navigate(`/home`)} className="mt-4 px-[1.2rem] py-3 rounded-xl  font-bold flex items-center gap-3 bg-gradient-to-br from-black/80 to-black/90 border border-white/10 text-white text-sm shadow-[0_25px_60px_rgba(0,0,0,0.7)] ">
+            <motion.button style={{padding:"0.4rem"}} onClick={() => navigate(`/home`)} className="mt-4 px-[1.2rem] py-3 cursor-pointer rounded-xl  font-bold flex items-center gap-3 bg-gradient-to-br from-black/80 to-black/90 border border-white/10 text-white text-sm shadow-[0_25px_60px_rgba(0,0,0,0.7)] ">
               return to home
             </motion.button>
-             <motion.button style={{padding:"0.4rem"}} onClick={() => handleDelete(postId)} className="mt-4 px-[1.2rem] py-3 rounded-xl  font-bold flex items-center gap-3 bg-gradient-to-br from-black/80 to-black/90 border border-white/10 text-white text-sm shadow-[0_25px_60px_rgba(0,0,0,0.7)] ">
+             <motion.button style={{padding:"0.4rem"}} onClick={() => handleDelete(postId)} className="mt-4 px-[1.2rem] cursor-pointer py-3 rounded-xl  font-bold flex items-center gap-3 bg-gradient-to-br from-yellow-700 to-yellow-700 border border-white/10 text-white text-sm shadow-[0_25px_60px_rgba(0,0,0,0.7)] ">
               delete Post
             </motion.button>
            </div>

@@ -36,8 +36,8 @@ const filteredPosts = (userPostData || []).filter((post) =>
       <p className='text-center mt-2 text-gray-600 '>Your one-stop solution for price comparison and smart shopping.</p>
         <div className='w-full flex items-center mt-2 flex-col-reverse gap-4 '>
           <div className='w-full  flex items-center justify-center gap-4'>
-             <button onClick={()=>Navigate("/additem")} style={{padding:"0.5rem",marginTop:"1rem"}} className='bg-yellow-700 text-white  rounded-md shadow-2xl shadow-yellow-900 hover:scale-105 inline'>Get AddItem</button>
-              <button onClick={handleAllPosts} style={{padding:"0.5rem",marginTop:"1rem"}} className='bg-green-700 text-white  rounded-md shadow-2xl shadow-green-900 hover:scale-105 inline'>Get All Post</button>
+             <button onClick={()=>Navigate("/additem")} style={{padding:"0.5rem",marginTop:"1rem"}} className='cursor-pointer bg-yellow-700 text-white  rounded-md shadow-2xl shadow-yellow-900 hover:scale-105 inline'>Get AddItem</button>
+              <button onClick={handleAllPosts} style={{padding:"0.5rem",marginTop:"1rem"}} className=' cursor-pointer bg-green-700 text-white  rounded-md shadow-2xl shadow-green-900 hover:scale-105 inline'>Get All Post</button>
 
           </div>
 
